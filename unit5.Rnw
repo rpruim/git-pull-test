@@ -35,6 +35,8 @@ xpnorm(x, m, s)
 A distribution is approximately normal with 
 mean \Sexpr{m} and sd \Sexpr{s}.  What proportion
 of the values are below \Sexpr{x}?
+Report your answer to 3 decimal 
+places.
 
 \begin{solution}
 \answer{\Sexpr{answer}}
