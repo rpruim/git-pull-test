@@ -6,7 +6,7 @@
 \begin{document}
 
 \begin{abstract}
-  Matrices and vectors are valid answer types.
+  This is an experiment to show what can be done with R and Ximera.
 \end{abstract}
 
 \maketitle
