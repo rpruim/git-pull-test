@@ -1,7 +1,7 @@
 \documentclass{ximera}
 %% handout
 %% nohints
-\title{Unit 4 includes a matrix and free response}
+\title{Unit 5: An example using Rnw to generate an activity}
 
 \begin{document}
 
