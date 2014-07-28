@@ -1,0 +1,37 @@
+\documentclass{ximera}
+%% handout
+%% nohints
+\title{Unit 4 includes a matrix and free response}
+
+\begin{document}
+
+\begin{abstract}
+  Matrices and vectors are valid answer types.
+\end{abstract}
+
+\maketitle
+
+
+
+
+\begin{exercise}
+<<include=FALSE>>=
+key <- 123
+set.seed(key)
+answer <- round(runif(1, .1, .35), 3)
+m <- round(runif(1,50,150), 1)
+s <- round(runif(1,10,25), 1)
+x <- round(qnorm( answer, m, s), 1)
+@
+
+
+A distribution is approximately normal with 
+mean \Sexpr{m} and sd \Sexpr{s}.  What proportion
+of the values are below \Sexpr{x}?
+
+\begin{solution}
+\answer{\Sexpr{answer}}
+\end{solution}
+\end{exercise}
+
+\end{document}
