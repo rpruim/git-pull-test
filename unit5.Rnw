@@ -21,7 +21,7 @@ opts_chunk$set(dev="png")
 @
 
 \begin{exercise}
-<<echo=FALSE, fig.width=4, fig.height=2>>=
+<<echo=FALSE, results="hide", fig.width=4, fig.height=2>>=
 key <- 123
 set.seed(key)
 answer <- round(runif(1, .1, .35), 3)
