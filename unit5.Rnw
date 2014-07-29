@@ -29,7 +29,7 @@ answer <- round(runif(1, .1, .35), 3)
 m <- round(runif(1,50,150), 1)
 s <- round(runif(1,10,25), 1)
 x <- round(qnorm( answer, m, s), 1)
-xpnorm(x, m, s)
+# xpnorm(x, m, s)
 @
 
 
