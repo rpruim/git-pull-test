@@ -21,6 +21,7 @@ opts_chunk$set(dev="png")
 @
 
 \begin{exercise}
+
 <<echo=FALSE, results="hide", fig.width=4, fig.height=2>>=
 key <- 123
 set.seed(key)
@@ -30,6 +31,7 @@ s <- round(runif(1,10,25), 1)
 x <- round(qnorm( answer, m, s), 1)
 xpnorm(x, m, s)
 @
+
 
 
 A distribution is approximately normal with 
