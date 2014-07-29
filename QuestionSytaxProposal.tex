@@ -1,0 +1,159 @@
+\documentclass{ximera}
+%% handout
+%% nohints
+%% space
+%% newpage
+%% numbers
+
+%\input{preamble.tex} %% we can turn off input when making a master document
+
+\outcome{Illustrate Question-Answer Formats.}
+
+\outcome{Have a nice basic example to work from.}
+
+\title{First example}
+
+\begin{document}
+\begin{abstract}
+In this activity we see some examples.
+\end{abstract}
+\maketitle
+
+\section{Numerical Answers}
+
+\begin{exercise}
+Let's see if we can do a little bit of arithmetic.
+What is $3+4$? 
+\numberAnswer[tol=+1e-6]{7}
+
+\begin{hint}
+Use your fingers.
+\end{hint}
+\end{exercise}
+
+
+\section{Expression answers}
+
+\begin{exercise}
+Let's do some calculus.
+
+What is $\frac{d}{dx} \sin(x)$?
+\begin{prompt}
+$\frac{d}{dx} = \expressionAnswer[test=evaluate]{\cos x}
+\end{prompt}
+\end{exercise}
+
+
+\section{Mutliple choice}
+
+Note: multiple correct answer are allowed.
+
+\begin{question}
+What are derivatives good for?
+\begin{multipleChoice}
+\choice[label=money]{Making lots of money by clever investment strategies.}
+\choice[correct, label=change]{Determining how fast a function is changing.}
+\choice[correct, label=optimize]{Finding the minimum value of a function.}
+\end{multipleChoice}
+\begin{hint}
+There are only two correct answers.  This is math class.
+\end{hint}
+\end{question}
+
+\section{Free reponse}
+
+\begin{exercise}
+How are you liking the Ximera project?
+\begin{textAnswer}  % freeResopnse? should this be freeAnswer?  textAnswer? textBox?
+Enter your response here.
+\end{textAnswer}
+\end{exercise}
+
+
+\section{Inline text (short)}
+
+\begin{exercise}
+My name is \textAnswer[free]{} and I'm \textAnswer[free]{} years old.  My 
+current mathematics class is \textAnswer[ignorespaces]{Calc1|Calc2}.     % can we handle regular expression-like thigs in the answers?
+\end{exercise}
+
+\section{Matix answer}
+
+What is the inverse of $M = \begin{matrix}1 & 2 \\ 3 & 4\end{matrix}$?
+
+\begin[test=equivalent, name=M]{matrixAnswer}
+[[1,-1],[-1,2]]
+\end{matrixAnswer}
+
+
+Enter a matrix with determinant 1 that has no zero entries.
+
+\begin[langauge=javascript]{code}
+function unitDeterminant() {
+  A[1][1] * A[2][2] - A[1][2] * A[2][1] == 1 && 
+    A[1][1] != 0 &&
+    A[1][2] != 0 &&
+    A[2][1] != 0 &&
+    A[2][2] != 0
+}
+\end{code}
+
+\begin[test=unitDeterminant, name=A]{matrixAnswer}
+\end{matrix-answer}
+\end{matrixAnswer}
+
+Now I'm dreaming a bit of a future world where 
+Enter a matrix with determinant 1 that has no zero entries.
+
+\begin[langauge=javascript]{code}
+unitDeterminant <- function() {
+  determinant(A) == 1 && all(A != 0)
+}
+
+\begin[test=unitDeterminant,name=A,langauge=R]{matrixAnswer}
+\end{matrix-answer}
+\end{matrixAnswer}
+
+
+\section{Code answer}
+
+\begin[language=python]{code}
+def testFoo():
+  foo(3,5) == (8,15)
+\end{code}
+
+Modify this funciton so that it returns a tuple containing both the sum
+and product of its inputs.
+\begin[language=phython, test=testFoo]{codeAnswer}
+def foo(a,b):
+  return a+b
+\end{codeAnswer}
+
+\section{Multi-stage exercises}
+
+\begin{exercise}
+
+\begin{stage}
+Demonstrate that you can add by answering this simple arithmetic problem.
+
+$ 3 + 5 = $ \numberAnswer{5}   % use 
+
+\end{stage}
+
+\begin{stage}
+Now that you now how to add, let's see if you can multiply.
+\end{stage}
+$ 3 * 5 = $ \numberAnswer{15}   % use 
+
+\begin{stage}
+Great.  You can add and multiply.
+\end{stage}
+
+\end{exercise}
+
+On the to-do list:
+\begin{enumeate}
+\item
+\end{enumerate}
+
+\end{document}
